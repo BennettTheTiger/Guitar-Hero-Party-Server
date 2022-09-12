@@ -1,0 +1,25 @@
+{
+  "name": "guitar-hero-server",
+  "version": "1.0.0",
+  "description": "A server for guitar hero data",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "lint": "eslint",
+    "local": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bennett Schoonerman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.19"
+  }
+}
