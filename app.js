@@ -1,10 +1,11 @@
 const express = require('express');
 require('dotenv').config();
+const cors = require('cors');
 // Using Node.js `require()`
 const mongoose = require('mongoose');
 
 const app = express();
-const port = 3000;
+app.use(cors())
 
 console.log('connecting to database...');
 mongoose.connect(process.env.DATABASE_URL);
@@ -32,5 +33,5 @@ const contestantRouter = require('./routes/contestant');
 app.use('/contestants', contestantRouter);
 
 app.listen(process.env.PORT, () => {
-  console.log(`Guitar Hero Server is up and listening on port ${port}`);
+  console.log(`Guitar Hero Server is up and listening on port ${process.env.PORT}`);
 });
